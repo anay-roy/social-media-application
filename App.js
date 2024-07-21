@@ -7,6 +7,7 @@ import LandingScreen from './components/auth/Landing';
 import RegisterScreen from './components/auth/Register';
 import LoginScreen from './components/auth/Login';
 import Homepage from './components/auth/HomePage';
+import ProfilePage from './components/auth/Profile';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,7 @@ export default function App() {
         <Stack.Screen name="SIGNUP" component={RegisterScreen}/>
         <Stack.Screen name="LOGIN" component={LoginScreen}/>
         <Stack.Screen name="Home" component={Homepage}/>
+        <Stack.Screen name="Profile" component={ProfilePage}/>
       </Stack.Navigator>
     </NavigationContainer>
     

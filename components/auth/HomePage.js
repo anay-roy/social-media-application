@@ -1,5 +1,7 @@
+// Import Icon component and other necessary components
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Dimensions, Animated } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons'; // Import the Icon component
 
 const Homepage = ({ navigation }) => {
   // Dummy data for top stories, posts, and profile suggestions
@@ -132,16 +134,17 @@ const Homepage = ({ navigation }) => {
         onPress={handleProfileIconPress}
         activeOpacity={0.8}
       >
-        <Animated.Image
-          source={require('../assets/obito.jpeg')}
+        <Animated.View
           style={[
-            styles.profileIconImage,
+            styles.profileIconContainer,
             {
               transform: [{ scale: scaleValue }],
               opacity: opacityValue,
             },
           ]}
-        />
+        >
+          <Icon name="person-outline" size={24} color="#fff" />
+        </Animated.View>
       </TouchableOpacity>
     </View>
   );
@@ -277,10 +280,11 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     elevation: 3,
   },
-  profileIconImage: {
+  profileIconContainer: {
     width: 24,
     height: 24,
-    tintColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   topAreapost: {
     height: 10
