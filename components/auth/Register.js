@@ -43,7 +43,8 @@ export class Signup extends Component {
               <FontAwesome name={'angle-double-left'} color={colors.primary} size={40} />
             </TouchableOpacity>
             <View style={styles.headerTextContainer}>
-              <Text style={styles.welcomeText}>Create Account</Text>
+              <Text style={styles.welcomeText}>Create</Text>
+              <Text style={styles.welcomeText}>Account</Text>
             </View>
           </View>
           <View style={styles.formContainer}>
@@ -127,12 +128,15 @@ const styles = StyleSheet.create({
   welcomeText: {
     fontSize: 40,
     color: colors.white,
+    fontWeight: 'bold',
+    fontStyle: 'italic'
   },
   formContainer: {
     width: '90%',
     alignItems: 'center',
   },
   inputContainer: {
+    top: 50,
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 20,
@@ -152,6 +156,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   signupButton: {
+    top: 50,
     backgroundColor: colors.primary,
     borderRadius: 5,
     borderWidth: 1,
